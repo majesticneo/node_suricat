@@ -4,9 +4,13 @@ A REST server based on NodeJS, Express and MySQL with the NPM module [mysql](htt
 
 1) Think to install first NodeJS server from [NodeJs](https://nodejs.org/en/).
 
-2) Copy files from this repository to your new projet REST server directory. 
+2) install Express framework from npm package. ( very usefull for templates).
 
-3) Create DataBase using script suricat.sql
+3) (optionnal) install nodemon from npm package ( relanch automatically the server on each modification). 
+
+4) Copy files from this repository to your new projet REST server directory. 
+
+5) Create DataBase using script suricat.sql
 
 you can use postman for testing REST/DB connexion.
 
