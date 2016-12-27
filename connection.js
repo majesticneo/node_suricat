@@ -1,5 +1,6 @@
 /**
  * From ALD team ( Alban Lionel Damien Team)
+ *              ***
  * module to connect to mysql database
  * database is store on Lionel desktop
  */
