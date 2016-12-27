@@ -1,4 +1,5 @@
 var connection = require('../connection');
+
  
 function TeamActuality() 
 {
