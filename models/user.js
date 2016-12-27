@@ -28,8 +28,8 @@ function User()
        
         connection.acquire(function(err, con) 
         {
-             console.log(user);
-            con.query('insert into users set ?', user, function(err, result) 
+            console.log("ici : " + user);
+            con.query('insert into users(email, password, idDepartment) VALUES(?,?,?)', [user.email, user.password, user.idDepartment], function(err, result) 
             {
                 con.release();
                 if (err) 
@@ -140,8 +140,6 @@ function User()
         });
     };
 
-
-
     /**
      * Check a login validity
      * @params user user in json format
@@ -151,8 +149,7 @@ function User()
     {
         connection.acquire(function(err, con) 
         {
-		    console.log(user.email);
-            con.query('select idUser from Users where email = ? AND password = ?', [user.email, user.password], function(err, result) 
+            con.query('select idUser, firstname, lastname, status from Users where email = ? AND password = ? AND active = true', [user.email, user.password], function(err, result) 
             {
                 con.release();
                 if (err) 
@@ -162,12 +159,18 @@ function User()
                 } 
                 else 
                 {
-			        if(result.length > 0) res.send({status: 0, message: 'Connexion OK', id: result[0].id});
+			        if(result.length > 0)
+                    {
+                        res.send({status: 0, message: 'Connexion OK', user: result[0]});
+                        console.log("***********************");
+                        console.log(" Loggin : ",result[0]);
+                        console.log("***********************");
+                    }
 			        else res.send({status: 1, message: 'login failed'});
                 }
             });
         });
-    }; 
+    };  
 
     /**
      * get the last id 
