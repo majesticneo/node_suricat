@@ -48,6 +48,7 @@ var UserRouter = require('./routes/UserRouter');
 var MessageRouter = require('./routes/MessageRouter');
 var ToDoRouter = require('./routes/ToDoRouter');
 var TeamActualityRouter = require('./routes/TeamActualityRouter');
+var CorporateLifeActualityRouter = require('./routes/CorporateLifeActualityRouter');
 
 /*-- Routes V2 --*/
 //var WorksCouncilActualityRouter = require('./routes/WorksCouncilActualityRouter');
@@ -57,7 +58,7 @@ var TeamActualityRouter = require('./routes/TeamActualityRouter');
 //var GotShortcutRouter = require('./routes/GotShortcutRouter');
 //var GotToolRouter = require('./routes/GotToolRouter');
 //var HaveRouter = require('./routes/HaveRouter');
-//var CorporateLifeActualityRouter = require('./routes/CorporateLifeActualityRouter');
+
 var connection = require('./connection');
 
 /* -- connect to mysql -- */
@@ -77,6 +78,7 @@ app.use('/message', MessageRouter);
 app.use('/todo', ToDoRouter);
 app.use('/teamActuality', TeamActualityRouter);
 app.use('/team',TeamRouter);
+app.use('/corpActuality', CorporateLifeActualityRouter);
 
 /*-- App use V2--*/
 //app.use('/Works', WorksCouncilActualityRouter);
@@ -87,7 +89,7 @@ app.use('/team',TeamRouter);
 //app.use('/GotShortcut', GotShortcutRouter);
 //app.use('/GotTool', GotToolRouter);
 //app.use('/Have', HaveRouter);
-//app.use('/corpActuality', CorporateLifeActualityRouter);
+
 
 /*-- Listen port --*/
 app.listen(3000)
@@ -96,22 +98,21 @@ module.exports = app;
 
 
 
-console.log("                _           _       ");
-console.log("               (_)         | |      ");
-console.log(" ___ _   _ ____ _  ___ ____| |_  ");
-console.log("/ __| | | |  __| |/ __/    | __/");
-console.log("\\__\\| |_| | |  | | (_| (_| | |  ");
-console.log("|___/\\__,_|_|  |_|\\___\\__,_|_|");  
+console.log("                _           _        _");
+console.log("               (_)         | |      | |");
+console.log(" ___ _   _ ____ _  ___ ____| |_     | | ___");
+console.log("/ __| | | |  __| |/ __/    | __/  _ | |/ __|");
+console.log("\\__\\| |_| | |  | | (_| (_| | |   | |/ |\\__\\");
+console.log("|___/\\__,_|_|  |_|\\___\\__,_|_|    \\__/ |___/"); 
 
-
-console.log("**********************************");
-console.log("*                                **");
-console.log("* Welcome To Suricat REST Server **");
-console.log("*                                **");
-console.log('*      Server is running         **');
-console.log("*                                **");
-console.log("*         MIT Licence            **");
-console.log("*    Alban / Lionel / Damien     **");
-console.log("***********************************");
-console.log(" **********************************");
+console.log("    **********************************");
+console.log("    *                                **");
+console.log("    * Welcome To Suricat REST Server **");
+console.log("    *                                **");
+console.log('    *      Server is running         **');
+console.log("    *                                **");
+console.log("    *         MIT Licence            **");
+console.log("    *    Alban / Lionel / Damien     **");
+console.log("    ***********************************");
+console.log("     **********************************");
 
