@@ -106,7 +106,6 @@ console.log("\\__\\| |_| | |  | | (_| (_| | |   | |/ |\\__\\");
 console.log("|___/\\__,_|_|  |_|\\___\\__,_|_|    \\__/ |___/"); 
 
 console.log("    **********************************");
-console.log("    *                                **");
 console.log("    * Welcome To Suricat REST Server **");
 console.log("    *                                **");
 console.log('    *      Server is running         **');

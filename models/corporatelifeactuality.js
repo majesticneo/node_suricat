@@ -26,7 +26,7 @@ function corporate()
     }; 
 
     /**
-     * Create a Actuality
+     * Create an Corporate Actuality
      * @params Actuality Actuality in json format
      * @params res response
      */
@@ -45,7 +45,7 @@ function corporate()
                 else 
                 {
                     
-                    getLastIdCorpActualityInsert(corporatelifeactuality.idActuality, res);
+                    getLastIdCorpActualityInsert(res);
                 }
             });
         });
@@ -127,6 +127,7 @@ function corporate()
     };
 
     /**
+     * 
      * get the last id 
      * TODO : move it in logical file
      * @params res response
@@ -151,6 +152,12 @@ function corporate()
         });
     }
 
+    /**
+     * 
+     * Insert id value in Corporate Life Actuality table 
+     * TODO : move it in logical file
+     * @params res response
+     */
     function insertcorporatelifeactuality(idActuality, res)
     {
         console.log("******** POST Corporate ACTUALITY *********");
